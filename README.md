@@ -18,6 +18,14 @@ LLAMA 2 7B is the locally deployed core LLM engine, with OpenAI GPT3.5 as a back
 **LLAMA 2 API**
 
 # Train
+**Hyperparameters**
+LLAMA 2
+
+LLAVA
+| Hyperparameter | Global Batch Size | Learning rate | Epochs | Max length | Weight decay |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| LLaVA-13B | 128 | 2e-3 | 1 | 2048 | 0 |
+
 # Inference
 # Evaluation
 # Acknowledgement
