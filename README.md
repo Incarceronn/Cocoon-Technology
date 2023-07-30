@@ -23,9 +23,9 @@ To run the api to load llama2 for inference
 python ./LLAMA_API/llama_api.py
 ```
 
-If you don't have an ngrok account, you will need to sign up at this link: https://ngrok.com/ 
-#use ngrok to expose api to the web
-ngrok http 7711 ...
+#If you don't have an ngrok account, you will need to sign up at this link: https://ngrok.com/ 
+use ngrok to expose api to the web
+ngrok http 7777 --domain={insert_fixed_domain}
 
 To test if your api is working, run the following command: 
 ```
@@ -50,7 +50,6 @@ Alternatively, access the clinical verification at api endpoint /llama2
 ### Train
 **Hyperparameters**
 LLAMA 2
-
 Add data in csv format (follow format in mimic...,). Alternatively,  
 
 Refer to Training.ipynb, Run all cells to train a finetuned llama. Adjust output_dir values to change where the model is saved. 
