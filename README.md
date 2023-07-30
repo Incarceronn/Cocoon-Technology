@@ -18,13 +18,12 @@ LLAMA 2 7B is the locally deployed core LLM engine, with OpenAI GPT3.5 as a back
 Running the Llama 2 API will automatically download weights. To use pretrained weights, refer to code in last cell of Training.ipynb and swap in the model loading in ./LLAMA_API/llama_api.py.
 
 ### Setting up LLAMA API
-**LLAMA 2 API**
 To run the api to load llama2 for inference 
 ```
 python ./LLAMA_API/llama_api.py
 ```
 
-#If you don't have an ngrok account, you will need to sign up at this link: https://ngrok.com/ 
+If you don't have an ngrok account, you will need to sign up at this link: https://ngrok.com/ 
 #use ngrok to expose api to the web
 ngrok http 7711 ...
 
