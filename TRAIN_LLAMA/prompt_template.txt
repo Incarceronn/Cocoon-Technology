@@ -1,0 +1,5 @@
+<s>[INST] <<SYS>>
+System prompt
+<</SYS>>
+
+User prompt [/INST] Model answer </s>
