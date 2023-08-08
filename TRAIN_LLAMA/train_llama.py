@@ -1,4 +1,5 @@
 #fine tuning process is drawn from here: https://towardsdatascience.com/fine-tune-your-own-llama-2-model-in-a-colab-notebook-df9823a04a32
+import pandas as pd
 import os
 import torch
 from datasets import load_dataset
@@ -15,7 +16,8 @@ from peft import LoraConfig, PeftModel
 from trl import SFTTrainer
 
 model_name = "meta-llama/Llama-2-7b-hf"
-dataset_name = "mlabonne/guanaco-llama2-1k"
+# dataset_name = "mlabonne/guanaco-llama2-1k"
+train_dataset_path = "../data/train_med_dialog.csv"
 new_model = "llama-2-7b-chat_finetuned"
 
 lora_r = 64
@@ -56,7 +58,12 @@ device_map = {"": 0}
 
 #load dataset and define quantisation, loading it with 4 bit precision onto gpu
 
-dataset = load_dataset(dataset_name, split="train")
+# dataset = load_dataset(dataset_name, split="train")
+
+dataset = load_dataset('csv', data_files = train_dataset_path)['train']
+
+#dataset.train_test_split(test_size = 0.2)
+
 
 compute_dtype = getattr(torch, bnb_4bit_compute_dtype)
 
